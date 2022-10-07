@@ -106,3 +106,93 @@ myString = "python programming"
 
 
 # STRING METHODS --> len( myString )
+
+
+# LISTS IN PYTHON
+
+# Way 1 - Using [ ]
+# alphabets = [ 'a', 'b', 'c', 'd', 'e', 'f' ]
+# print( alphabets )
+# print( type(alphabets) )
+
+# my_list = [ 100, 'hello', True, 2+3j ]
+# print( type(my_list) )
+# print( my_list )
+
+
+# # Way 2 - list() constructor
+
+# # my_list_2 = list( 'A', 'B', 'C', 'D', 'E', 'F' )
+# # my_list_2 = list()
+# my_list_2 = list( 'Hello' )
+# print( my_list_2 )
+# print( type(my_list_2) )
+
+# Operations on the List
+
+# alphabets = [ 'a', 'b', 'c', 'd', 'e', 'f' ]
+
+# Accessing values from list
+# alphabets[ index ]
+# print( alphabets[2] )
+# print( alphabets[-2] )
+
+# # slicing in List
+# print( alphabets[2:5] ) # ['c', 'd', 'e']
+# print( alphabets[-1] )
+# print( alphabets[-2] )
+# print( alphabets[-5:-2] ) # ['b', 'c', 'd']
+# print( alphabets[-2:-5] ) # WRONG --> You can only move in the forward direction
+
+# print( alphabets[:] )
+# print( alphabets[1:] )  # [ 'b', 'c', 'd', 'e', 'f' ]
+# print( alphabets[:-2] ) # [ 'a', 'b', 'c', 'd' ]
+
+
+# Replacemnt Mechanism in Lists
+
+# alphabets[2:-1] =  [ 'C', 'D', 'E' ]
+# print(alphabets)
+
+# alphabets[:] = []
+# print(alphabets) 
+
+#remove a certain part of the list
+# alphabets[:-2] = []
+# print(alphabets)
+
+alphabets = [ 'a', 'b', 'c', 'd', 'e', 'f' ]
+
+# Built-In Operations in the list
+
+# 1. length of the list
+print( len(alphabets) ) # 6
+
+# 2. Add an element at the end of the list
+# alphabets.append(10)
+# alphabets.append(20)
+# alphabets.append(30)
+# print( alphabets )
+
+# # 3. Insert an element in the certain position of the list
+# alphabets.insert(1, 'B')
+# print(alphabets)
+
+# 4. Add a list of elts at the end
+alphabets.extend( ['g', 'h', 'i'] )
+print(alphabets)
+
+# 5. Reverse a list
+# alphabets.reverse()
+# print(alphabets)
+
+# 6. Remove a value from the list
+alphabets.remove('c')
+alphabets.remove('d')
+alphabets.remove('e')
+print(alphabets)
+
+# 7. Remove the last elt of the list --> pop()
+alphabets.pop()
+alphabets.pop()
+print(alphabets)
