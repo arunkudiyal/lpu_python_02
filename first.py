@@ -161,12 +161,12 @@ myString = "python programming"
 # alphabets[:-2] = []
 # print(alphabets)
 
-alphabets = [ 'a', 'b', 'c', 'd', 'e', 'f' ]
+# alphabets = [ 'a', 'b', 'c', 'd', 'e', 'f' ]
 
 # Built-In Operations in the list
 
 # 1. length of the list
-print( len(alphabets) ) # 6
+# print( len(alphabets) ) # 6
 
 # 2. Add an element at the end of the list
 # alphabets.append(10)
@@ -179,20 +179,74 @@ print( len(alphabets) ) # 6
 # print(alphabets)
 
 # 4. Add a list of elts at the end
-alphabets.extend( ['g', 'h', 'i'] )
-print(alphabets)
+# alphabets.extend( ['g', 'h', 'i'] )
+# print(alphabets)
 
 # 5. Reverse a list
 # alphabets.reverse()
 # print(alphabets)
 
 # 6. Remove a value from the list
-alphabets.remove('c')
-alphabets.remove('d')
-alphabets.remove('e')
-print(alphabets)
+# alphabets.remove('c')
+# alphabets.remove('d')
+# alphabets.remove('e')
+# print(alphabets)
 
 # 7. Remove the last elt of the list --> pop()
-alphabets.pop()
-alphabets.pop()
-print(alphabets)
+# alphabets.pop()
+# alphabets.pop()
+# print(alphabets)
+
+
+# PROGRAMMING ABSTRACTIONS
+
+# 1. conditional stamenets
+
+# num1 = 50
+# num2 = 20
+# if num1 < num2:
+#     print(num1, "is less than ", num2)
+#     print('Hello...')
+# else:
+#     print(num1, "is greater than ", num2)
+
+
+# Q: - Given a number, print the square of the number if the number is greater than 5
+# number = 4
+# if number > 5:
+#     print(number * number)
+# print('Hello... The code ended here!')
+
+# Q: - Voting System
+# gender = M, age is greater or equals to 21 -> He can vote
+# gender = F, age is greater or equals to 18 -> She can vote
+
+
+# EXPLAINATION - = -> Assignment Operator || == -> Compartive Operator 
+
+gender = 'M'
+age = 10
+
+# if gender == 'M':
+#     if age > 21:
+#         print('He can vote!')
+#     else:
+#         print('Sorry! He, cannot vote!')
+# elif gender == 'F':
+#     if age > 18:
+#         print('She can vote!')
+#     else:
+#         print('Sorry! She cannot vote!')
+# else:
+#     print('ERROR! Please write correct values of gender or age!')
+
+if gender == 'M' and age > 21:
+    print('He can vote!')
+else: print('He cannot vote!')
+
+if gender == 'F' and age > 18:
+    print('She can vote!')
+else: print('She cannot vote!')
+
+if gender != 'F' or gender != 'M':
+    print('ERROR! Please write correct values of gender or age!')
