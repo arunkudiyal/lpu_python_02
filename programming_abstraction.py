@@ -76,15 +76,103 @@
 # Q -> Check whether a given number is a prime or not
 # 2, 3, 5, 7, 11, 13, ...
 
-num = 2999
-# 7 --> 1, 2, 3, 4, 5, 6, 7
-# count = 0 -> 1 --> 2
-counter = 0
-for index in range(1, num+1):
-    if num % index == 0:
-        counter = counter + 1
+# num = 2999
+# # 7 --> 1, 2, 3, 4, 5, 6, 7
+# # count = 0 -> 1 --> 2
+# counter = 0
+# for index in range(1, num+1):
+#     if num % index == 0:
+#         counter = counter + 1
 
-if counter == 2:
-    print(num, "is a PRIME number")
+# if counter == 2:
+#     print(num, "is a PRIME number")
+# else:
+#     print(num, "is NOT a PRIME number")
+
+
+# 1. while Loop --> You donot know where the loop ends
+
+# num = 10
+# for i in range(10, 0, -1):
+#     print(i)
+
+# num = 10
+# while(num > 0):
+#     print(num)
+#     num = num - 1
+
+# Q - Reverse a number
+# num = 1012356478
+# revresed_number = 0
+
+# while(num > 0):
+#     # Step 1 - Get the last digit (num % 10 = remainder)
+#     last_digit = num % 10
+#     #Step 2 - Re-create the reversed_number
+#     revresed_number = (revresed_number * 10) + last_digit
+#     #Step 3 - Remove each last_digit from the number
+#     num = num // 10
+
+# print(revresed_number)
+
+
+# Q- 1: print frist 10 even numbers
+# for num in range (2, 21, 2):
+#     print(num)
+
+# num = 2
+# while(num <= 20):
+#     print(num)
+#     # num = num + 2
+#     num += 2
+
+# Q - While Loop statemnet to print --> 105, 98, 91, ..., 7
+# num = 105
+# while(num >= 7):
+#     print(num)
+#     num -= 7
+
+# Q- code to add first n natural number
+# Q- odd / nums to n numbers
+# Q- Revese a number
+# Q- Print the table of a given number
+# Q- Fibonaci Series till n from the user
+# 0 1 1 2 3 5 8 13 19 .... n
+n = 15
+if n == 1:
+    print(1)
+elif n == 2:
+    print(1, 2)
+elif n < 0:
+    print('Enter a positive number to get the series...')
 else:
-    print(num, "is NOT a PRIME number")
+    first = 0
+    second = 1
+    print(first, end=" ")
+    print(second, end=" ")
+    index = 2
+    while(index < n):
+        third = first + second
+        print(third, end=" ")
+        first = second
+        second = third
+        index += 1
+    print("\n")
+
+
+# Q- Armstrong Number
+# 153 = 1^3 + 5^3 + 3^3 
+# 1 + 125 + 27 =  153
+
+# Q - for a given number, find HCF
+
+# Q - For a given decimal number, print the binary number
+num = 10
+binary = 0
+n = num
+while(n > 0):
+    remainder = n % 2                       # reiander = 0, 1
+    binary = (binary * 10) + remainder      # binary = 0
+    n = n/2                                 # n = 5
+
+print(binary)
