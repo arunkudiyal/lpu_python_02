@@ -138,26 +138,26 @@
 # Q- Print the table of a given number
 # Q- Fibonaci Series till n from the user
 # 0 1 1 2 3 5 8 13 19 .... n
-n = 15
-if n == 1:
-    print(1)
-elif n == 2:
-    print(1, 2)
-elif n < 0:
-    print('Enter a positive number to get the series...')
-else:
-    first = 0
-    second = 1
-    print(first, end=" ")
-    print(second, end=" ")
-    index = 2
-    while(index < n):
-        third = first + second
-        print(third, end=" ")
-        first = second
-        second = third
-        index += 1
-    print("\n")
+# n = 15
+# if n == 1:
+#     print(1)
+# elif n == 2:
+#     print(1, 2)
+# elif n < 0:
+#     print('Enter a positive number to get the series...')
+# else:
+#     first = 0
+#     second = 1
+#     print(first, end=" ")
+#     print(second, end=" ")
+#     index = 2
+#     while(index < n):
+#         third = first + second
+#         print(third, end=" ")
+#         first = second
+#         second = third
+#         index += 1
+#     print("\n")
 
 
 # Q- Armstrong Number
@@ -166,13 +166,80 @@ else:
 
 # Q - for a given number, find HCF
 
-# Q - For a given decimal number, print the binary number
-num = 10
-binary = 0
-n = num
-while(n > 0):
-    remainder = n % 2                       # reiander = 0, 1
-    binary = (binary * 10) + remainder      # binary = 0
-    n = n/2                                 # n = 5
 
-print(binary)
+# TUPLES
+# myList = [ 10, 20, 30, 40 ]
+# print(myList[-2])
+# print(myList[2])
+# # LISTS ARE MUTABLE (CHANGABLE)
+# myList.append(100)
+# print(myList)
+# print(type(myList))
+
+# myTuple = ( 10, 20, 30, 40 )
+# print(myTuple[-2])
+# print(myTuple[2])
+# # TUPLE ARE IMMUNATBLE (NON_CHANGABLE)
+# # myTuple[3] = 400 --> DONOT DO THIS
+# print(myTuple)
+# print("The length of the Tuple is:", len(myTuple))
+# print(type(myTuple))
+
+# Duplicate data can be put in a Tuple
+# myTuple = (100, 200, 100, True, (2+3j), "Tuple")
+# print(myTuple)
+
+# mySmallTuple = ("Tuple",)
+# print(type(mySmallTuple))
+
+# myNewTuple = tuple(("Apple", "Banana", "Pears", "Watermelon"))
+# print(myNewTuple)
+# print(type(myNewTuple))
+
+
+# OPERATIONS ON TUPLES
+
+# 1. Tuple Contactenation
+# tup1 = ("Val1", "Val2", "Val3")
+# tup2 = ("Val4", "Vala5")
+
+# tup3 = tup1 + tup2
+# print(tup3)
+# print(type(tup3))
+
+
+# 2. Tuple Nesting
+# nestedTuple = ( (10, 20, 30), ("Val1", "val2", "Val3"), (True, False) )
+# print(nestedTuple)
+
+# tup1 = ("Val1", "Val2", "Val3")
+# tup2 = ("Val4", "Vala5")
+# newNestedTuple = ( tup1, tup2 )
+# print(newNestedTuple)
+
+
+# 3. Repitive Tuples
+# myNewTuple = ('0',) * 10
+# print(myNewTuple)
+
+# 4. Deleting a Tuple
+# myNewTuple = ('0',) * 10
+# print(myNewTuple)
+# del myNewTuple
+# print(myNewTuple)
+
+# 5. Convert a list into a tuple
+# myList = [10, 20, 30, 40, True, "Hello"]
+# print(myList)
+# print(type(myList))
+# myConvertedTuple = tuple(myList)
+# print(myConvertedTuple)
+# print(type(myConvertedTuple))
+
+# myTuple = (10, 20, 30, 40, True, "Hello")
+# myConvertedList = list(myTuple)
+# print(myConvertedList)
+
+
+# Dictonary
+
