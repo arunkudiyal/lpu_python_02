@@ -167,7 +167,7 @@
 # Q - for a given number, find HCF
 
 
-# TUPLES
+# TUPLES - (  )
 # myList = [ 10, 20, 30, 40 ]
 # print(myList[-2])
 # print(myList[2])
@@ -180,7 +180,7 @@
 # print(myTuple[-2])
 # print(myTuple[2])
 # # TUPLE ARE IMMUNATBLE (NON_CHANGABLE)
-# # myTuple[3] = 400 --> DONOT DO THIS
+# myTuple[3] = 400 # --> DONOT DO THIS
 # print(myTuple)
 # print("The length of the Tuple is:", len(myTuple))
 # print(type(myTuple))
@@ -240,6 +240,138 @@
 # myConvertedList = list(myTuple)
 # print(myConvertedList)
 
+# Dictionary
+# Dict --> key: item
+# key -> String, item -> Any DT
+# myUser = { "name": "Arun Kudiyal", "email": "arun@example.com", "designation": "SDE-2", "age": 24, "isAdult": True }
+# print(myUser)
+# print(type(myUser))
 
-# Dictonary
+# myPerson = {
+#     "name": "Yash Sindhu",
+#     "email": "yash@example.com",
+#     "designation": "SDE - II",
+#     "address": {
+#         "street": "Street - 102",
+#         "city": "Chandigarh"
+#     },
+#     "comapny": "Microsoft",
+#     "hobbies": ["Cycling", "Gaming", "Playing Chess"],
+#     "age": 20,
+#     "isAdult": True,
+#     "marks": [98, 91, 87, 67, 71]
+# }
 
+# print(myPerson)
+
+# Access each keys and item pair
+# print("The designation of the person is", myPerson["designation"])
+# print("The address of the person is", myPerson["address"])
+# print("The hobbies of the person is", myPerson["hobbies"])
+# print("The marks of the person is", myPerson["marks"])
+
+# print("The designation of the person is", type(myPerson["designation"]))
+# print("The address of the person is", type(myPerson["address"]))
+# print("The hobbies of the person is", type(myPerson["hobbies"]))
+# print("The marks of the person is", type(myPerson["marks"]))
+
+# # Value of Gaming
+# print("One of the hobbies of the person is", myPerson["hobbies"][1])
+# print("City of the person is", myPerson["address"]["city"])
+
+# Value of Playing Chess
+# print("One of the hobbies of the person is", myPerson["hobbies"][2])
+# print("One of the marks of the person is", myPerson["marks"][3])
+# print(type(myPerson["hobbies"]))
+
+# METHODS -> 
+# 1. get() -> dict[""]
+# print(myPerson.get("hobbies"))
+# print(myPerson.get("hobbies")[1])
+
+# 2. keys()
+# print(myPerson.keys())
+# myKeys = myPerson.keys()
+# print(myKeys[2]) --> DONOT DO THIS | This isn;t a list -> dict_keys
+
+# # Q -> If a person donot have a "company" key, then print that "no company listed".
+# if "company" in myPerson.keys():
+#     print('Company Exists')
+# else:
+#     print('Company not listed!')
+
+# 3. setdefault("key", item)
+# Q -> If a person has a listed company, I will print "Company Exists", if not then create a key called "company" with a default value of 'Microsoft.
+# DICTONARIES ARE MUTABLE...
+# if "company" in myPerson.keys():
+#     print('Company Exists')
+# else:
+#     myPerson.setdefault("company", "Microsoft")
+
+# print(myPerson)
+
+# 4. items()
+# print(myPerson.items()) # -> dict_items 
+
+
+# 5. values() -> returns all the item values
+# print(myPerson.values())
+
+# print(myPerson.items())
+# if "Microsoft" in myPerson.values():
+#     print('Microsoft is the listed company')
+# else:
+#     print('Microsoft is NOT the listed company')
+
+# 6. update()
+# myPerson.update( {"designation": "SDE - Intern"} )
+# print(myPerson)
+
+# myPerson["designation"] = "SDE - I"
+# print(myPerson)
+
+# 7. pop("key")
+# myPerson.pop("email")
+# print(myPerson)
+
+''' 
+This is a
+multi-line comment
+'''
+
+# SETS 
+# 1. Its unordered -> Indices will not work
+# 2. Duplicates are not allowed in a set
+# 3. Sets are mutate
+
+# mySet = { "This", "is", "a", "Set", "is", "This" }
+# print(mySet)
+# print(type(mySet))
+
+# setToList = list(mySet)
+# print(setToList)
+# print(type(setToList))
+
+# SET METHODS - 
+# mySetOne = { 10, 50, 100 }
+# mySetTwo = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 }
+
+# 1. add()
+# mySetOne.add("Python")
+# print(mySetOne)
+
+# 2. difference --> Insection of two sets
+# print( mySetTwo.difference(mySetOne) ) 
+
+# 3. discard() --> Delete a value of any specified elt
+# mySetOne.discard("is")
+# print(mySetOne)
+
+# 4. issuperset -> True or False
+# print( mySetTwo.issuperset(mySetOne) )
+
+# 5. union()
+# print( mySetOne.union(mySetTwo) )
+
+# mySetTwo.difference_update(mySetOne)
+# print(mySetTwo)
