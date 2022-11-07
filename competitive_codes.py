@@ -129,9 +129,97 @@
 # inp_month = int(input("Enter the month number - "))
 # print( month_list[inp_month] )
 
-import datetime
-date = int(input("Enter date (1-31) - "))
-month = int(input("Enter date (1-12) - "))
-year = int(input("Enter date (yyyy) - "))
-myDate = datetime.datetime(year, month, date)
-print(myDate)
+# import datetime
+# date = int(input("Enter date (1-31) - "))
+# month = int(input("Enter date (1-12) - "))
+# year = int(input("Enter date (yyyy) - "))
+# myDate = datetime.datetime(year, month, date)
+# print(myDate)
+
+
+# Loops -> Repitive statements
+
+# range(a) -> Range starts with 0 and (num - 1)
+# 1. FOR LOOP
+# for variableName in range(upperRange):
+#   EXPRESSION YOU WANT TO PERFORM IN LOOP
+
+# for variable in range(10):
+#     print(variable, end=" ")
+# print("\n")
+
+# Questions -> Find the sum of all ositive number upto the user's input
+# steps = int(input("Enter the upper range - "))
+# sum = 0
+# for variable in range(steps):
+#     # Checking if the number if even or not
+#     if( variable % 2 == 0 ):
+#         sum += variable
+
+# print(sum)
+
+# Q -> Given a set of numbers, print the numbers as a list
+# steps = int(input("Enter the upper range - "))
+# myList = []
+# for var in range(steps):
+#     # Input the values
+#     value = int(input("Enter the value for the set - "))
+#     # Inset each value at the end of the set
+#     myList.append(value)
+
+# for var2 in myList:
+#     print(var2)
+
+# range(a, b)
+# print( range(10, 20) ) -> 10 is incluse but 20 is exclusive
+# for value in range(10, 20):
+#     print(value)
+
+# Q -> Given a range, find all the prime numbers for that range
+# lower = int(input("Enter the starting range - "))
+# upper = int(input("Enter the ending range - "))
+# prime_numbers = set()
+# # 10, 11, 12, 13, .... , 19
+
+# # 5, 6, 7, 8, 9, 10
+# # variable = 15
+# for variable in range(lower, upper):
+#     # 2 -> 4, 2 -> 5, 2 -> 6, 2 -> 7, 2 -> 8, 2 -> 9
+#     if variable > 1:
+#         # variable2 -> (2 - 14)
+#         for variable2 in range(2, variable):
+#             if(variable % variable2) == 0:
+#                 # STOP
+#                 break
+#         else:
+#             prime_numbers.add(variable)
+            
+# for values in prime_numbers:
+#     print(values, end=" ")
+
+# FUNCTIONAL APPROACH -
+# prime_numbers = set()
+# def checkPrime(number):
+#     if number > 1:
+#         for i in range(2, number):
+#             if(number % i == 0):
+#                 break
+#         else:
+#             prime_numbers.add(number)
+
+# range1 = int(input("Enter a lower range - "))
+# range2 = int(input("Enter a upper range - "))
+# for number in range(range1, range2):
+#     checkPrime(number)
+
+# for j in prime_numbers:
+#     print(j, end=", ")
+
+# range(a, b, c)
+for i in range(2, 21, 2):
+    print(i, end=" ")
+print("\n")
+
+for i in range(20, 0, -2):
+    print(i, end=" ")
+print("\n")
