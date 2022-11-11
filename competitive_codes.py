@@ -216,10 +216,56 @@
 #     print(j, end=", ")
 
 # range(a, b, c)
-for i in range(2, 21, 2):
-    print(i, end=" ")
-print("\n")
+# for i in range(2, 21, 2):
+#     print(i, end=" ")
+# print("\n")
 
-for i in range(20, 0, -2):
-    print(i, end=" ")
-print("\n")
+# for i in range(20, 0, -2):
+#     print(i, end=" ")
+# print("\n")
+
+
+# PATTERN PRINTING -
+
+num = int(input("Enter your number value - "))
+# PATTERN - 1
+
+# *
+# * *
+# * * *
+# * * * *
+# * * * * *
+
+# Approach - 1
+# Rows
+# for row in range(1, num+1):
+#     # Coloumns
+#     for col in range(1, row+1):
+#         print('*', end=" ")
+#     print("\n")
+
+# Approach - 2
+# row = 1
+# col = 1
+# # rows -> 1, 2, 3, 4, 5
+# while(row < num+1):
+#     # cols -> 
+#     while(col < row+1):
+#         print('*', end=" ")
+#         col += 1
+#     print("\n")
+#     row += 1
+
+
+# Approach - 3 - Using Lists
+# myList = ['*', '* *', '* * *', '* * * *', '* * * * *']
+# for i in myList:
+#     print(i)
+
+# PATTERN - 2
+
+# * * * * *
+# * * * *
+# * * *
+# * *
+# *
