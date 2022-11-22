@@ -227,7 +227,7 @@
 
 # PATTERN PRINTING -
 
-num = int(input("Enter your number value - "))
+# num = int(input("Enter your number value - "))
 # PATTERN - 1
 
 # *
@@ -269,3 +269,42 @@ num = int(input("Enter your number value - "))
 # * * *
 # * *
 # *
+
+# FUNCTIONS
+
+# def sum(a, b):
+#     # print(a + b)
+#     return (a + b)
+
+# res1 = sum(10, 20)
+# res2 = sum(105, 209)
+
+# print(sum(res1, res2))
+
+# Return Types
+# def functionName(para1: type1, para2: type2) -> returnType:
+# def sum(a: int, b: int) -> int:
+#     return (a + b)
+
+# res = sum(10, 20)
+# print(res)
+
+
+# Arguments / Parameters are refernces | Refernce Parameters
+def printList(li: list):
+    li[1] = -10
+    for value in li:
+        print(value)
+
+myList = [100, 200, 250, 210, 500]
+print(myList)           # [100, 200, 250, 210, 500]
+printList(myList)       # 100, -10, 250, 210, 500
+print(myList)           # [100, 200, 250, 210, 500]
+
+
+# myList = [10, 20, 30]
+# memLoc(myList) = #ABCDEF
+
+printList(myList)
+# printList( [10, 20, 30] ) WRONG
+# printList(#ABCDEF)
