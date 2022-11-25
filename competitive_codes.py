@@ -289,22 +289,74 @@
 # res = sum(10, 20)
 # print(res)
 
+# def square(n: int):
+#     # print(n * n)
+#     return n * n
+
+# answer = square(10)
+# print(answer)
 
 # Arguments / Parameters are refernces | Refernce Parameters
-def printList(li: list):
-    li[1] = -10
-    for value in li:
-        print(value)
+# def printList(li: list):
+#     li[1] = -10
+#     for value in li:
+#         print(value)
 
-myList = [100, 200, 250, 210, 500]
-print(myList)           # [100, 200, 250, 210, 500]
-printList(myList)       # 100, -10, 250, 210, 500
-print(myList)           # [100, 200, 250, 210, 500]
+# myList = [100, 200, 250, 210, 500]
+# print(myList)           # [100, 200, 250, 210, 500]
+# printList(myList)       # 100, -10, 250, 210, 500
+# print(myList)           # [100, 200, 250, 210, 500]
 
 
-# myList = [10, 20, 30]
-# memLoc(myList) = #ABCDEF
+# myList2 = [10, 20, 30]
+# print(myList2)
+# memLoc(myList2) = #ABCDEF
 
-printList(myList)
+# printList(myList2)
 # printList( [10, 20, 30] ) WRONG
 # printList(#ABCDEF)
+
+# Default Arguments
+# def checPrime(n: int = 1) -> str:
+#     count = 0
+#     for i in range(1, n+1):
+#         if n%i == 0:
+#             count += 1
+#     if count == 2:
+#         return "Yes, it's a Prime Number"
+#     else:
+#         return "No, it's not a Prime Number"
+
+# ans1 = checPrime(5)
+# print(ans1)
+
+# Keyboard Arguments | Variable Length Arguments
+# Your number of arguments is variable
+# def addNumbers(*args: int) -> int:
+#     sum = 0
+#     print(args.__len__())
+#     for value in range(0, args.__len__()):
+#         sum += args[value]
+#     return sum
+
+# sum1 = addNumbers(10, 20, 30, 40)
+# sum2 = addNumbers(10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
+# print('Sum1 is ', sum1)
+# print('Sum2 is ', sum2)
+
+# DOC-STRING in Functions
+# def findSquare(n: int) -> int:
+#     '''A utility function to find the square of any given passed argumnet or value '''
+#     return n*n
+
+# print(findSquare.__doc__)
+
+# Anouymous Functions -> Any function which is created not by using def
+# def functionName(params: type) -> return type
+
+# Q -> Diff b/w Function & Anouymous Functions
+# variableName = lambda parameters: functionBody
+
+findCube = lambda num1: num1 * num1 * num1
+ans = findCube(9)
+print(ans)
