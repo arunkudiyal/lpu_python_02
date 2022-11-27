@@ -357,6 +357,76 @@
 # Q -> Diff b/w Function & Anouymous Functions
 # variableName = lambda parameters: functionBody
 
-findCube = lambda num1: num1 * num1 * num1
-ans = findCube(9)
-print(ans)
+# findCube = lambda num1: (num1 * num1 * num1)
+# ans = findCube(9)
+# print(ans)
+
+
+
+# RECURSION #
+# Q :- Given a number, you are supposed to fnd the sum of the n natural numbers.
+# n = 5 -> 5 + 4 + 3 + 2 + 1 = 15
+# n = 4 -> 4 + 3 + 2 + 1 = ...
+# n = 6 -> 6 + 5 + 4 + 3 + 2 + 1 = ...
+
+# n = k -> k + (k-1) + (k-2) + (k-3) + .... + 1 
+
+# Sum of n natural nos -> n(n+1) / 2
+
+# def sumOfNatutalNumbers(n: int) -> int:
+#     # Base Condition
+#     if(n == 2):
+#         return 3
+#     else:
+#         return n + sumOfNatutalNumbers(n-1)
+
+# n = int(input('Enter any value - '))
+# ans1 = sumOfNatutalNumbers(n)
+# print(ans1)
+
+# explaination
+
+# sum(10) -> result = sum(10 - 1) -> return 10 + sum(9) -> return 10 + 45 -> return 55
+# sum(9) -> result = sum(9 - 1) -> return 9 + sum(8)
+# sum(8) -> result = sum(8 - 1) -> return 8 + sum(7) -> return 8 + 
+#.
+#.
+# sum(3) -> reult = sum(3 - 1) -> return 3 + sum(2) -> return 3 + 3 -> return 6
+# sum(2) -> result = sum(2 - 1) -> return 2 + sum(1) -> 2 + 1 -> return 3
+# sum(1) -> 1
+
+
+# Q -> given a n value, find the fibonacci series upto n 
+# fib(2) -> 0 1
+# fib(5) -> 0 1 1 2 3
+
+# fib(n) -> fib(n) + fib(n-1) + fib(n-2) + fib(n-3) + ... + fib(1) + fib(0)
+
+# IMP -> Series start from ? -> 0 & 1
+def fib_series(n: int):
+    # Base Condition
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fib_series(n-1) + fib_series(n-2)
+
+terms = int(input('enter the term - '))
+if(terms < 0):
+    print('Enter a +ve number')
+else:
+    for i in range(0, terms):
+        print(fib_series(i))
+
+# EXPLAINATION - 
+# fib_series(10) -> for(i -> 0 to 9)
+#               -> i = 0 --> 0
+
+#               -> i = 1 --> 1
+
+#               -> i = 2 --> fib_series(1) + fib_series(0) -> 1 + 0 -> 1
+
+#               -> i = 3 -> fib_series(2) + fib_series(1) -> fib_series(0) + fib_series(1) +    fib_series(1) -> 0 + 1 + 1 -> 2
+
+#               -> i = 4 -> fib_series(3) + fib(2) -> (fib(2) + fib(1)) + (fib(1) + fib(0)) -> 1 + 1 + 1 + 0 -> 3
