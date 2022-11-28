@@ -474,3 +474,10 @@
 # Hint 1 --> Use Recursion --> What is the base condition
 # n = 3
 # Hint 2 --> def TOI(n, sourceRod, destinationRod, auxRod):
+
+def TOH(n, sourceRod, destinationRod, auxRod):
+    # Base Condition
+    if(n == 0):
+        return
+
+TOH(0, 'A', 'B', 'C')
