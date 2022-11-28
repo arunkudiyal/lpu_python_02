@@ -403,21 +403,21 @@
 # fib(n) -> fib(n) + fib(n-1) + fib(n-2) + fib(n-3) + ... + fib(1) + fib(0)
 
 # IMP -> Series start from ? -> 0 & 1
-def fib_series(n: int):
-    # Base Condition
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
-    else:
-        return fib_series(n-1) + fib_series(n-2)
+# def fib_series(n: int):
+#     # Base Condition
+#     if n == 0:
+#         return 0
+#     elif n == 1:
+#         return 1
+#     else:
+#         return fib_series(n-1) + fib_series(n-2)
 
-terms = int(input('enter the term - '))
-if(terms < 0):
-    print('Enter a +ve number')
-else:
-    for i in range(0, terms):
-        print(fib_series(i))
+# terms = int(input('enter the term - '))
+# if(terms < 0):
+#     print('Enter a +ve number')
+# else:
+#     for i in range(0, terms):
+#         print(fib_series(i))
 
 # EXPLAINATION - 
 # fib_series(10) -> for(i -> 0 to 9)
@@ -430,3 +430,47 @@ else:
 #               -> i = 3 -> fib_series(2) + fib_series(1) -> fib_series(0) + fib_series(1) +    fib_series(1) -> 0 + 1 + 1 -> 2
 
 #               -> i = 4 -> fib_series(3) + fib(2) -> (fib(2) + fib(1)) + (fib(1) + fib(0)) -> 1 + 1 + 1 + 0 -> 3
+
+
+
+# TOWER OF HANOI --> (2^n - 1) --> (2^3 - 1) --> 8 - 1 --> 7
+
+# A             B           C
+# 3 disc
+
+# A --> B
+# A --> C
+
+# A -> 1 {largest}
+# B -> 1 {smalles}
+# C -> 1 {second largest}
+
+# B -> C
+# A -> 1 {largest}
+# B -> 0 {}
+# C -> 2 {smalles, second largest}
+
+# A -> B
+# A -> 0 {}
+# B -> 1 {largest}
+# C -> 2 {smalles, second largest}
+
+# C -> A
+# A -> 1 {smallest}
+# B -> 1 {largest}
+# C -> 1 {second largest}
+
+# C -> B
+# A -> 1 {smallest}
+# B -> 2 {largest, second largest}
+# C -> 0 {}
+
+# A -> B
+# A -> 0 {}
+# B -> 3 {largest, second largest, smallest}
+# C -> 0 {}
+
+
+# Hint 1 --> Use Recursion --> What is the base condition
+# n = 3
+# Hint 2 --> def TOI(n, sourceRod, destinationRod, auxRod):
