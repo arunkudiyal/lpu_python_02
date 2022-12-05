@@ -475,9 +475,103 @@
 # n = 3
 # Hint 2 --> def TOI(n, sourceRod, destinationRod, auxRod):
 
-def TOH(n, sourceRod, destinationRod, auxRod):
-    # Base Condition
-    if(n == 0):
-        return
+# def TOH(n, sourceRod, destinationRod, auxRod):
+#     # Base Condition
+#     if(n == 0):
+#         return
 
-TOH(0, 'A', 'B', 'C')
+# TOH(0, 'A', 'B', 'C')
+
+
+# MATH MODULE
+
+# import math
+
+# # Mathematical Constants
+# # 1. PI = 22 / 7 = 3.14...
+# print(math.pi)
+
+# # Q:- Given a radius, find the area of a circle
+# def find_circle_area(radius):
+#     return (math.pi * radius * radius)
+
+# ans = find_circle_area(10)
+# print(ans)
+
+
+# print(math.inf)
+# print(-math.inf)
+
+# # div =  
+# if( 10e108 > math.inf ):
+#     print('True')
+# else:
+#     print('False')
+
+# print(f"Euler's Constant", math.e)
+# print(f"Tau Constant", math.tau)
+
+# # NaN -> Not a Number
+# a = "Arun"
+# b = "Kudiyal"
+# def add(num1, num2):
+#     if(type(num1) == 'str' or type(num2) == 'str'):
+#         return math.nan
+#     else:
+#         return num1 + num2
+
+# add(a, b)
+# add(100, 200)
+
+
+# Mathematical Methods
+# import math
+
+# def calculate_area_of_circle(radius):
+#     PI = 3.14
+#     return PI * radius * radius
+
+# def calculate_area_of_circle_using_math(radius):
+#     return math.pi * radius * radius
+
+# radius = int(input('enter the value of the radius - '))
+# areaOne = calculate_area_of_circle(radius)
+# areaTwo = calculate_area_of_circle_using_math(radius)
+# print(areaOne)
+# print(areaTwo)
+
+
+# Q:- Strong Numbers
+# n -> upper_range -> 1000 --> 1 - 1000
+# 145 -> 1! + 4! + 5!
+
+# Function to find a factorial of a given number
+# def factorial(num) -> int:
+#     if(num == 0):
+#         return 1
+#     return num * factorial(num-1)
+
+# # Function to check for a strng number
+# def isStrong(num) -> bool:
+#     # Reverse a number -> FORMULA
+#     newNum = str(num)
+#     # temp variable to store the sum
+#     sum = 0
+#     # loop can access each digit the number
+#     for i in range(len(newNum)):
+#         sum += factorial(int(newNum[i]))
+
+#     if(sum == num):
+#         return True
+#     else:
+#         return False
+
+# # Driver Code
+# n = int(input('enter an upper range - '))
+# if n <= 0:
+#     print('enter a +ve value')
+# else:
+#     for value in range(1, n+1):
+#         if isStrong(value):
+#             print(value, end=" ")
+#     print("\n")
