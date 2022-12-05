@@ -575,3 +575,43 @@
 #         if isStrong(value):
 #             print(value, end=" ")
 #     print("\n")
+
+
+# Math Module
+import math
+
+# Math Module -> Constants
+# print( math.pi )
+# print( math.tau )
+# print( math.e )
+# print( math.inf )
+# print( -math.inf )
+
+# # Methods
+# # 1. ceil() & floor()
+# print( math.ceil(2.55) )
+# print( math.floor(2.55) )
+
+# # 2. factorial
+# print( math.factorial(5) )
+
+# # 3. Absolute values -> fabs(number) -> float
+# print( math.fabs(-10) )
+
+# # Logarithmic operations
+# x = 10
+# print('e^x is - ', math.e ** x)
+
+# print(math.log(x))
+# print(math.log2(x))
+# print(math.log10(x))
+
+
+# # Trigonometric Functions
+# x = 10
+# print( math.sin(x) )
+# print( math.cos(x) )
+# print( math.tan(x) )
+
+# # square root
+# print( math.sqrt(25) )
