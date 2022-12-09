@@ -578,7 +578,7 @@
 
 
 # Math Module
-import math
+# import math
 
 # Math Module -> Constants
 # print( math.pi )
@@ -615,3 +615,41 @@ import math
 
 # # square root
 # print( math.sqrt(25) )
+
+
+# Tower of Hanoi (ToH)
+
+# Rod -> 3 --> (A, B, C)
+# n -> No of discs
+
+# n = 1
+# A --> C
+# (steps --> 1)
+
+# n = 2
+# A --> B
+# A --> C
+# B --> C
+# (steps --> 3)
+
+# n = 3
+# D1 -> A --> C
+# D2 -> A --> B
+# D1 -> C --> B
+# D3 -> A --> C
+# [ n(A) = 0, n(B) = 2, n(C) = 1 ]
+# D1 -> B --> A
+# [ A -> Smallest, B -> Second Largest, C -> Largest ]
+# D2 -> B --> C
+# D1 -> A --> C
+# (steps --> 7)
+
+# n --> n; steps = 2^n - 1
+
+
+# SOLUTION :-
+# n = 10
+# for value in range(0, 10):
+#     # n = 10
+#     for val in range(0, 10):
+#         print(value, val)                # n*n times
