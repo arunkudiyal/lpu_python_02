@@ -632,7 +632,7 @@
 # B --> C
 # (steps --> 3)
 
-# n = 3
+# n = 3 --> (D1, D2, D3)
 # D1 -> A --> C
 # D2 -> A --> B
 # D1 -> C --> B
@@ -644,12 +644,50 @@
 # D1 -> A --> C
 # (steps --> 7)
 
+# n = 4 --> (D1, D2, D3, D4)
+# D1 -> A --> B
+# D2 -> A --> C
+# D1 -> B --> C
+# [Rod B is empty]
+# D3 -> A --> B
+# D1 -> C --> A
+# [ D1 = A; D2 = C; D3 = B ]
+# D2 -> C --> B
+# D1 -> A --> B
+# D4 -> A --> C
+# [ D1 = B; D2 = B; D3 = B ]
+# D1 -> B --> C
+# D2 -> B --> A
+# D1 -> C --> A
+# D3 -> B --> C
+# D1 -> A --> B
+# D2 -> A --> C
+# D1 -> B --> C
+# (n = 4, steps = 15)
+# { 2^n - 1 }
+
 # n --> n; steps = 2^n - 1
 
 
 # SOLUTION :-
-# n = 10
-# for value in range(0, 10):
-#     # n = 10
-#     for val in range(0, 10):
-#         print(value, val)                # n*n times
+# Statergy 1 - I have to move discs from A to B; so that i can find the largest disc and place it from A to C --> Assume that A and C are empty and all the other discs are at Rod B 
+
+# All the disc -> 
+def tower_of_hanoi(n, start_rod, aux_rod, end_rod):
+    # BASE CONDITION - 
+    if n == 1:
+        print( "Move Disc 1 from {} to {}".format(start_rod, end_rod) )
+        return
+    # Plan - A
+    # --> Taking largest disc from A -> Rod A is empty
+    # --> Placing largest disc to C -> No other smaller discs there -> Rod C is empty
+    # --> All the disc are at B
+    tower_of_hanoi(n-1, start_rod, end_rod, aux_rod)
+    print("Move Disc {} from {} to {}".format(n, start_rod, end_rod))
+
+    # Plan - B
+    # I will have to adjust B and C recursively by taking help of A
+    tower_of_hanoi(n-1, aux_rod, start_rod, end_rod)
+
+n = int(input('enter the number of disc - '))
+tower_of_hanoi(n, 'A', 'B', 'C')
