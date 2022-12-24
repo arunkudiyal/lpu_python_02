@@ -97,7 +97,7 @@
 
 # 2. Abstraction --> Your user should be restricted to access certain properties & certain methods bu hiding the details from the user by making them private (__)
 
-# 3. Inheritance --> 
+# 3. Inheritance --> An ability of a class to inherit the public properties & public methods from the parent class to the child class.
 
 # 4. Polymorphism
 
@@ -149,15 +149,43 @@ class User(Person):
         return 'Hello, my name is {}. I am {} years old. And my hobbies are {} and {}. I live in the {} city'.format(super().getName(), super().getAge(), self.__hobbies[0], self.__hobbies[1], self.__address.get('city'))
 
 # Create Objects
-userOne = User("User One", 23, ['Playing Chess', 'Playing Soccer'], {'city': 'Chandigarh', 'state': 'Chandigarh'})
-print( userOne.getUserDetails() )
-# Updated the details
-userOne.setName("New User One")
-userOne.setAge(24)
-userOne.setHobbies(["Playing Guitar", "Attending Coding Contest"])
-userOne.setAddress({'city': 'Delhi', 'state': 'Delhi'})
-# Print new details
-print( userOne.getUserDetails() )
+# userOne = User("User One", 23, ['Playing Chess', 'Playing Soccer'], {'city': 'Chandigarh', 'state': 'Chandigarh'})
+# print( userOne.getUserDetails() )
+# # Updated the details
+# userOne.setName("New User One")
+# userOne.setAge(24)
+# userOne.setHobbies(["Playing Guitar", "Attending Coding Contest"])
+# userOne.setAddress({'city': 'Delhi', 'state': 'Delhi'})
+# # Print new details
+# print( userOne.getUserDetails() )
 
 # userTwo = User("User Two", 20, ['Coding', 'Attending Hackathons'], {'city': 'Dehradun', 'state': 'Uttarakhand'})
 # print(userTwo.name)
+
+# Multiple Inheritance
+class Father:
+    def __init__(self, propOne):
+        self.propertyOne = propOne
+    
+    def show(self):
+        return 'Value - {}'.format(self.propertyOne)
+
+class Mother:
+    def __init__(self, propTwo):
+        self.propertyTwo = propTwo
+    
+    def show(self):
+        return 'Value - {}'.format(self.propertyTwo)
+
+    
+class Child(Mother, Father):
+    def __init__(self, propOne, propTwo, propThree):
+        Father.__init__(self, propOne)
+        Mother.__init__(self, propTwo)
+        self.propertyThree = propThree
+
+    def showChild(self):
+        return 'Value - {}'.format(self.propertyThree)
+
+childOne = Child('Father Property', 'Mother Property', 'Child Property')
+print( childOne.show() )
