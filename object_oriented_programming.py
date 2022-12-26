@@ -102,90 +102,174 @@
 # 4. Polymorphism
 
 # Parent Class
-class Person:
-    def __init__(self, userName, userAge):
-        self.__name = userName
-        self.__age = userAge
+# class Person:
+#     def __init__(self, userName, userAge):
+#         self.__name = userName
+#         self.__age = userAge
 
-    def getName(self):
-        return self.__name
+#     def getName(self):
+#         return self.__name
 
-    def getAge(self):
-        return self.__age
+#     def getAge(self):
+#         return self.__age
 
-    def setName(self, newName):
-        self.__name = newName
+#     def setName(self, newName):
+#         self.__name = newName
 
-    def setAge(self, newAge):
-        self.__age = newAge
+#     def setAge(self, newAge):
+#         self.__age = newAge
 
-# Child Class --> Inherit/Access all the properties / methods from the Parent Class
-class User(Person):
-    # Take value from user -> Parameterised Constructor
-    def __init__(self, userName, userAge, userHobbies, userAddress):
-        # key = value
-        # properties = values
-        # call the parent constructor
-        super().__init__(userName, userAge)
-        self.__hobbies = userHobbies
-        self.__address = userAddress
+# # Child Class --> Inherit/Access all the properties / methods from the Parent Class
+# # super() --> A method which helps the child class to access properties or methods from the parent class.
+# class User(Person):
+#     # Take value from user -> Parameterised Constructor
+#     def __init__(self, userName, userAge, userHobbies, userAddress):
+#         # key = value
+#         # properties = values
+#         # call the parent constructor
+#         # print( super().__name )   # NO
+#         # 1st task --> Call the parent constructor
+#         super().__init__(userName, userAge)
+#         # Later, define new fatures (new propertes)
+#         self.__hobbies = userHobbies
+#         self.__address = userAddress
 
-    # Getters & Setters
-    # Getters --> Helps user to access the keys/properties of the class (BUT NOT DIRECTLY)
-    def getAddress(self):
-        return self.__address
+#     # Getters & Setters
+#     # Getters --> Helps user to access the keys/properties of the class (BUT NOT DIRECTLY)
+#     def getAddress(self):
+#         return self.__address
 
-    def getHobbies(self):
-        return self.__hobbies
+#     def getHobbies(self):
+#         return self.__hobbies
 
-    # Setters --> Help user to update the keys/properties of the class (BUT NOT DIRECTLY)
-    def setHobbies(self, newHobbies):
-        self.__hobbies = newHobbies
+#     # Setters --> Help user to update the keys/properties of the class (BUT NOT DIRECTLY)
+#     def setHobbies(self, newHobbies):
+#         self.__hobbies = newHobbies
 
-    def setAddress(self, newAddress):
-        self.__address = newAddress
+#     def setAddress(self, newAddress):
+#         self.__address = newAddress
 
-    def getUserDetails(self):
-        return 'Hello, my name is {}. I am {} years old. And my hobbies are {} and {}. I live in the {} city'.format(super().getName(), super().getAge(), self.__hobbies[0], self.__hobbies[1], self.__address.get('city'))
+#     def getUserDetails(self):
+#         return 'Hello, my name is {}. I am {} years old. And my hobbies are {} and {}. I live in the {} city'.format(super().getName(), super().getAge(), self.__hobbies[0], self.__hobbies[1], self.__address.get('city'))
 
-# Create Objects
-# userOne = User("User One", 23, ['Playing Chess', 'Playing Soccer'], {'city': 'Chandigarh', 'state': 'Chandigarh'})
-# print( userOne.getUserDetails() )
-# # Updated the details
-# userOne.setName("New User One")
-# userOne.setAge(24)
-# userOne.setHobbies(["Playing Guitar", "Attending Coding Contest"])
-# userOne.setAddress({'city': 'Delhi', 'state': 'Delhi'})
-# # Print new details
-# print( userOne.getUserDetails() )
+# # Create Objects
+# # userOne = User("User One", 23, ['Playing Chess', 'Playing Soccer'], {'city': 'Chandigarh', 'state': 'Chandigarh'})
+# # print( userOne.getUserDetails() )
+# # # Updated the details
+# # userOne.setName("New User One")
+# # userOne.setAge(24)
+# # userOne.setHobbies(["Playing Guitar", "Attending Coding Contest"])
+# # userOne.setAddress({'city': 'Delhi', 'state': 'Delhi'})
+# # # Print new details
+# # print( userOne.getUserDetails() )
 
-# userTwo = User("User Two", 20, ['Coding', 'Attending Hackathons'], {'city': 'Dehradun', 'state': 'Uttarakhand'})
-# print(userTwo.name)
+# # userTwo = User("User Two", 20, ['Coding', 'Attending Hackathons'], {'city': 'Dehradun', 'state': 'Uttarakhand'})
+# # print(userTwo.name)
 
-# Multiple Inheritance
-class Father:
-    def __init__(self, propOne):
-        self.propertyOne = propOne
+# # Multiple Inheritance
+# class Father:
+#     def __init__(self, propOne):
+#         self.propertyOne = propOne
     
-    def show(self):
-        return 'Value - {}'.format(self.propertyOne)
+#     def show(self):
+#         return 'Value - {}'.format(self.propertyOne)
 
-class Mother:
-    def __init__(self, propTwo):
-        self.propertyTwo = propTwo
+# class Mother:
+#     def __init__(self, propTwo):
+#         self.propertyTwo = propTwo
     
-    def show(self):
-        return 'Value - {}'.format(self.propertyTwo)
+#     def show(self):
+#         return 'Value - {}'.format(self.propertyTwo)
 
     
-class Child(Mother, Father):
-    def __init__(self, propOne, propTwo, propThree):
-        Father.__init__(self, propOne)
-        Mother.__init__(self, propTwo)
-        self.propertyThree = propThree
+# class Child(Mother, Father):
+#     def __init__(self, propOne, propTwo, propThree):
+#         Father.__init__(self, propOne)
+#         Mother.__init__(self, propTwo)
+#         self.propertyThree = propThree
 
-    def showChild(self):
-        return 'Value - {}'.format(self.propertyThree)
+#     def showChild(self):
+#         return 'Value - {}'.format(self.propertyThree)
 
-childOne = Child('Father Property', 'Mother Property', 'Child Property')
-print( childOne.show() )
+# childOne = Child('Father Property', 'Mother Property', 'Child Property')
+# print( childOne.show() )
+
+
+# MAJOR EXAMPLE :-
+
+# class A:
+#     def __init__(self, prop1, prop2):
+#         self.__prop1 = prop1
+#         self.__prop2 = prop2
+
+#     def getProp1(self):
+#         return self.__prop1
+
+#     def getProp2(self):
+#         return self.__prop2
+
+
+# class B():
+#     def __init__(self, prop3, prop4):
+#         self.__prop3 = prop3
+#         self.__prop4 = prop4
+
+#     def getProp3(self):
+#         return self.__prop3
+
+#     def getProp4(self):
+#         return self.__prop4
+
+# class C(A, B):
+#     def __init__(self, prop1, prop2, prop3, prop4, prop5, prop6):
+#         # super().__init__(prop1, prop2, prop3, prop4)
+#         # CANNOT DO :- self.demo = super().__prop1
+#         # super().__init__(prop1, prop2)
+#         # C(A, B) -> super().__init__   # Constructor of class A
+#         # C(B, A) -> super().__init__   # Constructor of class B
+#         # super().__init__()
+#         A.__init__(self, prop1, prop2)
+#         B.__init__(self, prop3, prop4)
+#         self.__prop5 = prop5
+#         self.__prop6 = prop6
+
+#     def getProp5(self):
+#         return self.__prop5
+
+#     def getProp6(self):
+#         return self.__prop6
+
+#     def getDetails(self):
+#         return 'Prop1 - {}, Prop2 - {}, Prop3 - {}, Prop4 - {}, Prop5 - {}, Prop6 - {}'.format(super().getProp1(), super().getProp2(), super().getProp3(), super().getProp4(),self.getProp5(), self.getProp6() )
+
+#     # def getDetails(self):
+#     #     return 'Prop1 - {}, Prop2 - {}, Prop5 - {}, Prop6 - {}'.format(super().getProp1(), super().getProp2(),self.getProp5(), self.getProp6() )
+
+
+# cObject = C(100, 200, 300, 400, 500, 600)
+# print( cObject.getDetails() )
+
+
+class Animal:
+    def __init__(self, name):
+        self.animalName = name
+    
+    def getDetails(self):
+        return 'The name of the animal is --> {}'.format(self.animalName)
+
+class Mammal(Animal):
+    def __init__(self, nameOfMammal, nameOfAnimal):
+        super().__init__(nameOfAnimal)
+        self.mammalName = nameOfMammal
+
+    def getDetails(self):
+        return 'The name of the mammal is --> {}'.format(self.mammalName)
+
+firstMammal = Mammal('Whale', 'Sparrow')
+firstAnimal = Animal('Nightangle')
+# print( firstMammal.getAnimalDetails() )
+
+# O/P -> The name of the mammal is --> Whale
+# Method Overriding
+print( firstMammal.getDetails() )
+print( firstAnimal.getDetails() )
