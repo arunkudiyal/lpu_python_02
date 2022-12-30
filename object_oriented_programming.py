@@ -99,7 +99,7 @@
 
 # 3. Inheritance --> An ability of a class to inherit the public properties & public methods from the parent class to the child class.
 
-# 4. Polymorphism
+# 4. Polymorphism --> It refres to a methods acting in different forms depending upon how it's being execute. 
 
 # Parent Class
 # class Person:
