@@ -1,0 +1,3 @@
+Hello, this is a Demo Documnet
+This documnet contains details related to Python & Python Costructs.
+This file can be taken into consideration for any Python Problem.
